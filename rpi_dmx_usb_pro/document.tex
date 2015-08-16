@@ -1,19 +1,56 @@
-%%This is a very basic article template.
-%%There is just one section and two subsections.
-\documentclass{article}
+\documentclass[draft,titlepage,a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\title{Raspberry Pi DMX USB Pro}
+\author{Arjan van Vught}
+\date{\today}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Raspberry Pi DMX USB Pro}
+\fancyfoot[R]{Page \thepage}
+
+\pagenumbering{roman}
 
 \begin{document}
 
+\maketitle
 
-\section{Title}
+\tableofcontents
 
-\subsection{Subtitle}
+\break
 
-Plain text.
+\pagenumbering{arabic}
 
-\subsection{Another subtitle}
+\section{Introduction}
 
-More plain text.
+Open source USB DMX512 RDM and compatibility with software that supports Enttec USB Pro.
 
+\subsection{Main features}
+
+\begin{itemize}
+
+\item Raspberry Pi baremetal programming controls DMX512 timing
+\item Open source \url{https://github.com/vanvught/rpidmx512/tree/master/rpi\_dmx\_usb\_pro}
+\item Supported operating systems: Windows, MAC OS, Linux
+\item Using the FT245RL USB to parallel interface for fast communication with the host 
+\item DMX512 Transmitter or Receiver
+\item No external power supply required
+\item ANSI E1.11-2008 compliant (DMX512-A)
+\item E1.20-2010 compliant (RDM)
+\item Fully compatible with software suitable for ENTTEC USB Pro
+\item Configuration is stored on the sdcard (file "params.txt")
+\item Set your own manufacturer name and id (file "rdm\_device.txt")
+\item Compatible with OpenLighting rdmpro\_sniffer (widget\_mode=3)
+\item DMX receive rate throttling option to ensure receiving software isn't overloaded with too many frames per second 
+\item Real-time statistics and process information is available on external monitor
+\item UUID (or S/N) is based on MAC-address (works across all Raspberry Pi models)
+\end{itemize}
+
+\section{Title new}
+
+More text
 
 \end{document}
