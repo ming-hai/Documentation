@@ -3,6 +3,7 @@
 	<name>rpi_dmx_usb_pro</name>
 	<comment></comment>
 	<projects>
+		<project>common</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
